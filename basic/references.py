@@ -22,7 +22,7 @@ class projective_reference:
         if self.dim<2:
             return True
         else:
-            return matrix(basis).rank == self.dim 
+            return matrix(basis).rank() == self.dim 
             
     def getMatrix(self):
         return matrix([x for x in self.basis]).T
@@ -35,7 +35,7 @@ def refChangeMatrix(new_ref, old_ref=None):
     else:
         return old_ref.getMatrix()*new_ref.getMatrix().inverse()
 
-# It is strongly recommended to use refChangeMatrix and then change the points by hand
+# It is strongly recommended to use refChangeMatrix and then change the points by multiplying them
 """Changes a point from the old reference to the given new one."""
 def changeRef(point, new_ref, old_ref=None):
     return refChangeMatrix(new_ref,old_ref)*point;

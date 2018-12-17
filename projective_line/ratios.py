@@ -41,5 +41,6 @@ def cross_ratio(theta0, theta1, theta2, theta3):
     
     return divide(finalNum,finalDen)
 
-def 3div_ratio(theta1, theta2, theta3):
-    pass
+"""Calculates the division ratio of 3 points."""
+def div_ratio3(theta0, theta1, theta2):
+    return divide((theta1-theta0),(theta2-theta1))
