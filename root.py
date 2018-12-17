@@ -9,6 +9,13 @@ from basic.references import *
 from basic.dual import *
 from basic.pappus import *
 
+from applications.applications import *
+
+from projective_line.homography import *
+from projective_line.mobius import *
+from projective_line.ratios import *
+
+from cuadrics.cuadric import *
 
 
 def __init__():
