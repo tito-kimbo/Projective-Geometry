@@ -10,5 +10,5 @@ class homography(application):
     
     def __init__(self, m):
         application.__init__(self,m)
-        if self.matrix.rank() != min(self.matrix.ncols(), self.matrix.nrows()):
-            raise ValueError("The homography must be injective.")
+        if self.matrix.ncols() != self.matrix.nrows() or self.matrix.rank() != self.matrix.ncols():
+            raise ValueError("The homography must be bijective.")
