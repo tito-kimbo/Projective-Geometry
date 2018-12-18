@@ -19,7 +19,7 @@ from cuadrics.cuadric import *
 
 """
 INSTRUCTIONS
-Open Sage console (through icon in Windows, through the command 'sage - ' in Linux).
+Open Sage console (through icon in Windows, through the command 'sage --sh' in Linux).
 Move console to the directory where this file is stored (through 'cd DIRECTORY').
 Open console python interpreter ('python' command).
 Write: 'from root import *'.

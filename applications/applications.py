@@ -17,3 +17,7 @@ class application:
     """Given an application f we can call f(x) over a vector or an array of adequate size."""
     def __call__(self,x):
         return self.matrix*vector(x)
+
+"""Returns the composition of f and g."""
+def compose(f,g):
+    return application(f.matrix*g.matrix)

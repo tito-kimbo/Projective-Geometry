@@ -13,7 +13,7 @@ class mobius_transform:
             raise ValueError("Matrix must be non-singular.")
     
     """Transforms given theta through the mobius transform."""
-    def transform_theta(self, theta):
+    def __call__(self, theta):
         denom = self.matrix[1][0]*theta+self.matrix[1][1]
         if denom == 0:
             return 'NaN'
