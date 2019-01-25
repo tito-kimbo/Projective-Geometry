@@ -41,7 +41,7 @@ CONTENTS
 
 3. The projective line
     3.1 Möbius transformations
-    3.2 Division ratio of 3 points -- UNFINISHED
+    3.2 Division ratio of 3 points
     3.3 Cross-ratio / Anharmonic ratio
     3.4 Harmonic quadruples -- UNFINISHED
     3.5 Line homography classifier -- UNFINISHED
@@ -59,7 +59,7 @@ CONTENTS
     4.8 Classification of sets of conics -- UNFINISHED
     4.9 Conic homographies -- UNFINISHED
     
-5. Euclidean and Afine geometry
-    5.1 Afine geometry -- UNFINISHED
+5. Euclidean and Affine geometry
+    5.1 Affine geometry -- UNFINISHED
     5.2 Euclidean geometry -- UNFINISHED
 """

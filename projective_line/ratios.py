@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # ratios
 from math import isnan
+from sage.all import Rational
+
 
 """Auxiliary division which accepts division by zero and by infinity."""
 def divide(num, denom):
@@ -18,7 +20,7 @@ def divide(num, denom):
 Values of theta can be numeric or nan=float('nan') which is considered
 infinity.
 """
-def cross_ratio(theta0, theta1, theta2, theta3):
+def cross_ratio(theta0, theta1, theta2, theta3, rational=True):
     # WE NEED TO FIRST SIMPLIFY POSSIBLE DIVISION BY 0
     # AND NaN (infinity) values
     num1 = theta0-theta2
@@ -39,8 +41,15 @@ def cross_ratio(theta0, theta1, theta2, theta3):
     finalNum = divide(num1,denom1)
     finalDen = divide(num2,denom2)
     
-    return divide(finalNum,finalDen)
+    if rational:
+        return Rational(divide(finalNum,finalDen))
+    else:
+        return divide(finalNum,finalDen)
 
 """Calculates the division ratio of 3 points."""
-def div_ratio3(theta0, theta1, theta2):
-    return divide((theta1-theta0),(theta2-theta1))
+def div_ratio3(theta0, theta1, theta2, rational=True):
+    aux = divide((theta1-theta0),(theta2-theta1))
+    if rational:
+        return Rational(aux)
+    else:
+        return aux
